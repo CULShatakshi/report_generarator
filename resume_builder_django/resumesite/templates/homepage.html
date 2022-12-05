@@ -6,11 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<style>
+
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+
+
+
+    body {
+        gradient {
+            height: 200px;
+            background-color: #cccccc;
+            background-image: linear-gradient(powderblue, pink, white);
+        }
+      }
+
+.content {
+  max-width: 1000px;
+  margin: auto;
+  top: 60px;
+  background: powderblue;
+  padding: 100px;
+
+ 
+}
+
+  
+
+</style>
+</head>
 <body>
+    
+
+
+
+<div class="content">
     <h1>Welcome to report generator</h1>
-    <p>do you want a formal report</p>
-    <a href="{% url 'formal' %}" class="btn btn-primary">Formal Report</a>
-    <p>do you want a informal report</p>
-    <a href="{% url 'info' %}" class="btn btn-primary">Informal Report</a>
-</body>
-</html>
+    <p>Choose a report format as per your preferance!</p>
+</div>    
+    
+  </div>
+
+
+  <div class="container">
+    <div class="vertical-center">
+        <a class="fcc-btn" href="{% url 'formal' %}">Formal Report</a> 
+        <a class="fcc-btn" href="{% url 'info' %}">Informal Report</a>
+     </div>
+  </div>
+
+  
+  
+  <style>
+
+
+
+    .fcc-btn {
+        background-color: #199319;
+        position: relative;
+        top: 100px;
+        color: white;
+        padding: 15px 25px;
+        text-decoration: none;
+      }
+    
+    .fcc-btn:hover {
+        background-color: #223094;
+      }
+
+     
+    
+  </style>
