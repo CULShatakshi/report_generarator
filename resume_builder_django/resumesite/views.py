@@ -1,12 +1,21 @@
 from django.shortcuts import render
-from .forms import ContactForm, FormalForm
+from .forms import ContactForm, FormalForm, PostForm
+
+ 
+from django.contrib.auth.decorators import login_required
 
 def report_informal(request):
 	return render(request, 'report_informal.html', {})
 def report_formal(request):
 	return render(request, 'report_formal.html', {})
+
+
 def homepage(request):
 	return render(request, 'homepage.html', {})
+
+
+
+
 
 def info(request):
 	form=ContactForm()
@@ -61,3 +70,11 @@ def formal(request):
 			#to add more go to : forms.py
 			# print(name,email)
 	return render(request,'formal.html',{'form':form})
+
+def new(request):
+	if request.method == 'POST':
+		form=PostForm(request.POST)
+	else:
+		form=PostForm()
+	return render(request,'formal.html',{'form':form})
+		
