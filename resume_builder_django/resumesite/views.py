@@ -16,18 +16,18 @@ def info(request):
 			event_name=form.cleaned_data['event_name']
 			event_date=form.cleaned_data['event_date']
 
-			introduction=form.cleaned_data['introduction']
-			main_body=form.cleaned_data['introduction']
-			conclusion=form.cleaned_data['introduction']
-			highlights=form.cleaned_data['highlights']
+			How_would_you_summarise_the_event_in_one_line=form.cleaned_data['How_would_you_summarise_the_event_in_one_line']
+			main_body=form.cleaned_data['main_body']
+			conclusion=form.cleaned_data['conclusion']
+			time=form.cleaned_data['Time']
 			
 
 			data={'event_name':event_name}
 			data['event_date']=event_date
-			data['introduction']=introduction
+			data['How_would_you_summarise_the_event_in_one_line']=How_would_you_summarise_the_event_in_one_line
 			data['main_body']=main_body
 			data['conclusion']=conclusion
-			data['highlights']=highlights
+			data['time']=time
 
 			
 			return render(request,'report_informal.html',data)

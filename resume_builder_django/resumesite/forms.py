@@ -93,13 +93,13 @@ from crispy_forms.layout import Row
 class ContactForm(forms.Form):
 	event_name=forms.CharField(required=False)
 	event_date=forms.DateField(required=False)
-	introduction=forms.CharField(required=False)
+	How_would_you_summarise_the_event_in_one_line=forms.CharField(required=False)
 	main_body=forms.CharField(required=False)
 	conclusion=forms.CharField(required=False)
-	highlights=forms.CharField(required=False)
+	Time=forms.CharField(required=False)
 	
 
-	
+	# How_would_you_summarise_the_event_in_one_line
 
 	def __init__(self,*args,**kwargs):
 		super().__init__(*args,**kwargs)
@@ -110,15 +110,15 @@ class ContactForm(forms.Form):
 		self.helper.form_method="post"
 		self.helper.layout=Layout(
 			Row(
-                Column('event_name', css_class='form-group col-md-5  mb-10'),
-                Column('event_date', css_class='form-group col-md-7 mb-10'),
+                Column('event_name', css_class='form-group col-md-12  mb-15'),
+                Column('event_date', css_class='form-group col-md-3 mb-10'),
                 css_class='form-row  center'
             ),
 			Row(
-                Column('introduction', css_class='form-group col-md-5  mb-10'),
-				Column('main_body', css_class='form-group col-md-5  mb-10'),
-				Column('conclusion', css_class='form-group col-md-5  mb-10'),
-				Column('highlights', css_class='form-group col-md-5  mb-10'),
+                Column('How_would_you_summarise_the_event_in_one_line', css_class='form-group col-md-12  mb-15'),
+				Column('main_body', css_class='form-group col-md-12  mb-15'),
+				Column('Time', css_class='form-group col-md-12  mb-15'),
+				Column('conclusion', css_class='form-group col-md-12  mb-15'),
 
                
                 css_class='form-row  center'
@@ -145,14 +145,14 @@ class FormalForm(forms.Form):
 		self.helper.form_method="post"
 		self.helper.layout=Layout(
 			Row(
-                Column('event_name1', css_class='form-group col-md-5  mb-10'),
-                Column('event_date1', css_class='form-group col-md-7 mb-10'),
+                Column('event_name1', css_class='form-group col-md-12 mb-15'),
+                Column('event_date1', css_class='form-group col-md-3 mb-10'),
                 css_class='form-row  center'
             ),
 			Row(
-                Column('introduction1', css_class='form-group col-md-5  mb-10'),
-				Column('main_body1', css_class='form-group col-md-5  mb-10'),
-				Column('conclusion1', css_class='form-group col-md-5  mb-10'),
+                Column('introduction1', css_class='form-group col-md-12  mb-15'),
+				Column('main_body1', css_class='form-group col-md-12  mb-15'),
+				Column('conclusion1', css_class='form-group col-md-12  mb-15'),
                
                 css_class='form-row  center'
             ),
