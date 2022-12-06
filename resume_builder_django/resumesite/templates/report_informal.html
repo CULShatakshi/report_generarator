@@ -8,13 +8,11 @@
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
-   <!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body id="top">
     
-    <div>
+    <div id="content">
         <p>
             {{event_name}}<br>
             {{event_date}}
@@ -31,7 +29,8 @@
         <p>
             {{conclusion}}
         </p>
-    
+        
+    </div>
         
     <style>
          h1 {text-align: center;}
@@ -41,7 +40,18 @@
     
     
     </style>
-
+    <script>
+        function generatepdf(){
+            const element=document.getElementById("content");
+            html2pdf()
+            .from(element)
+            .save();
+        }
+    </script>
+   
+   <button onclick="generatepdf()">  download</button>
+    
+         
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 

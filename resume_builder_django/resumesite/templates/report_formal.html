@@ -8,12 +8,18 @@
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 <body id="top">
+<<<<<<< HEAD
     <div>
+=======
+    
+    <div id="content" style="font-family: 'Times New Roman', Times, serif;font-size: 12px;">
+>>>>>>> 45ef6870fced523ef4ae7f4ce1a10ade28bfe522
         <p>
             {{event_name1}}<br>
             {{event_date1}}    
@@ -28,6 +34,23 @@
             {{conclusion1}}
         </p>
     </div>
+<<<<<<< HEAD
+=======
+    <script>
+        function generatepdf(){
+            const element=document.getElementById("content");
+            html2pdf()
+            .from(element)
+            .save();
+        }
+    </script>
+    <button onclick="generatepdf()">  download</button>
+
+            
+
+
+        
+>>>>>>> 45ef6870fced523ef4ae7f4ce1a10ade28bfe522
     
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
