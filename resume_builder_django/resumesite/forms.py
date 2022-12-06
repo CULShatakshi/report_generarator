@@ -3,6 +3,10 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout,Submit
 from crispy_forms.layout import Column
 from crispy_forms.layout import Row
+from django.forms import ModelForm
+from .models import Post
+
+ 
 
 
 # class SkillWidget(forms.MultiWidget):
@@ -159,3 +163,13 @@ class FormalForm(forms.Form):
 			
 			Submit('submit','Submit',css_class="btn-success")
 			)
+
+class PostForm(ModelForm):
+	class meta:
+		model=Post
+		fields= '__all__'
+		
+	def __init__(self,*args,**kwargs):
+		super().__init__(*args,**kwargs)
+		self.helper=FormHelper
+		self.helper.form_class = ' container justify-content-center '
