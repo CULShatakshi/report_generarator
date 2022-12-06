@@ -19,6 +19,7 @@ def info(request):
 			introduction=form.cleaned_data['introduction']
 			main_body=form.cleaned_data['introduction']
 			conclusion=form.cleaned_data['introduction']
+			highlights=form.cleaned_data['highlights']
 			
 
 			data={'event_name':event_name}
@@ -26,6 +27,7 @@ def info(request):
 			data['introduction']=introduction
 			data['main_body']=main_body
 			data['conclusion']=conclusion
+			data['highlights']=highlights
 
 			
 			return render(request,'report_informal.html',data)

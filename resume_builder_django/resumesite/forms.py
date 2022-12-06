@@ -96,6 +96,7 @@ class ContactForm(forms.Form):
 	introduction=forms.CharField(required=False)
 	main_body=forms.CharField(required=False)
 	conclusion=forms.CharField(required=False)
+	highlights=forms.CharField(required=False)
 	
 
 	
@@ -117,6 +118,8 @@ class ContactForm(forms.Form):
                 Column('introduction', css_class='form-group col-md-5  mb-10'),
 				Column('main_body', css_class='form-group col-md-5  mb-10'),
 				Column('conclusion', css_class='form-group col-md-5  mb-10'),
+				Column('highlights', css_class='form-group col-md-5  mb-10'),
+
                
                 css_class='form-row  center'
             ),
