@@ -6,38 +6,61 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="The Curriculum Vitae of Sakshi-Aafiya-Hasti Bloggs." />
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% comment %} <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
     <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <style>
-    body{
-        background-color: rgb(153, 206, 215);
-    }
+    style>
+                    .fcc-btn {
+            background-color: #199319;
+            position: relative;
+            top: 100px;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            }
+
+            .fcc-btn:hover {
+            background-color: #223094;
+            }
+    </style>
+    
 </style>
 </head>
 
-<body >
+<body style="background-color: #0093E9; background-image: linear-gradient(90deg, #0093E9 0%, #adede3 100%);">
+    <section class= "vh-100" style= "padding-top: 100px; padding-right:50px; padding-left:50px;">
+        <div class="row d-flex justify-content-center align-items-center h-100" >
+            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1"style="background-color:white; border-radius: 25px">
+                <div class='container' style= "font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; padding-left:40px; padding-top:40px; padding-bottom:20px;">
+                    <h3>FORMAL REPORT PREVIEW</h3> 
+                    <div id="content">
+                        <p>
+                            {{event_name1}}<br>
+                            {{event_date1}}    
+                        </p>
+                        <p>
+                            {{introduction1}}
+                        </p>
+                        <p>
+                        {{main_body1}}
+                        </p>
+                        <p>
+                        {{conclusion1}}
+                        </p>
+                    </div>
+                    <button onclick="generatepdf() " class="fcc-btn" style="margin-left:600px;  background-color: #0093E9;background-image: linear-gradient(90deg, #0093E9 0%, #adede3 100%);">  
+                        Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>                        
 
-<body id="top">
-    <div id="content">
-
-        <p>
-            {{event_name1}}<br>
-            {{event_date1}}    
-        </p>
-        <p>
-            {{introduction1}}
-        </p>
-        <p>
-            {{main_body1}}
-        </p>
-        <p>
-            {{conclusion1}}
-        </p>
-    </div>
+   
     <script>
         function generatepdf(){
             const element=document.getElementById("content");
@@ -46,7 +69,6 @@
             .save();
         }
     </script>
-    <button onclick="generatepdf()">  download</button>
 
             
 
