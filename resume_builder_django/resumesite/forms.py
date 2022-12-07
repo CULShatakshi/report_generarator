@@ -97,14 +97,15 @@ from .models import Post
 class ContactForm(forms.Form):
 	event_name=forms.CharField(required=False)
 	event_date=forms.DateField(required=False)
-	How_would_you_summarise_the_event_in_one_line=forms.CharField(required=False)
-	main_body=forms.CharField(required=False)
+	How_would_you_summarise_the_event=forms.CharField(required=False)
+	As_a_writer_How_would_you_rate_the_event_out_of_10=forms.CharField(required=False)
+	Would_you_like_to_give_special_credits_to_anyone=forms.CharField(required=False)
 	conclusion=forms.CharField(required=False)
-	Time=forms.CharField(required=False)
+	What_was_the_inspiration_for_this_event=forms.CharField(required=False)
 	
 
-	# How_would_you_summarise_the_event_in_one_line
-
+	# How_would_you_summarise_the_event
+ 
 	def __init__(self,*args,**kwargs):
 		super().__init__(*args,**kwargs)
 		self.helper=FormHelper
@@ -119,9 +120,10 @@ class ContactForm(forms.Form):
                 css_class='form-row  center'
             ),
 			Row(
-                Column('How_would_you_summarise_the_event_in_one_line', css_class='form-group col-md-12  mb-15'),
-				Column('main_body', css_class='form-group col-md-12  mb-15'),
-				Column('Time', css_class='form-group col-md-12  mb-15'),
+                Column('How_would_you_summarise_the_event', css_class='form-group col-md-12  mb-15'),
+				Column('As_a_writer_How_would_you_rate_the_event_out_of_10', css_class='form-group col-md-12  mb-15'),
+				Column('What_was_the_inspiration_for_this_event', css_class='form-group col-md-12  mb-15'),
+				Column('Would_you_like_to_give_special_credits_to_anyone', css_class='form-group col-md-12  mb-15' ),
 				Column('conclusion', css_class='form-group col-md-12  mb-15'),
 
                

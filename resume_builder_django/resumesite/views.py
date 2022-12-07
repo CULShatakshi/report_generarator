@@ -26,18 +26,20 @@ def info(request):
 			event_name=form.cleaned_data['event_name']
 			event_date=form.cleaned_data['event_date']
 
-			How_would_you_summarise_the_event_in_one_line=form.cleaned_data['How_would_you_summarise_the_event_in_one_line']
-			main_body=form.cleaned_data['main_body']
+			How_would_you_summarise_the_event=form.cleaned_data['How_would_you_summarise_the_event']
+			As_a_writer_How_would_you_rate_the_event_out_of_10=form.cleaned_data['As_a_writer_How_would_you_rate_the_event_out_of_10']
 			conclusion=form.cleaned_data['conclusion']
-			time=form.cleaned_data['Time']
+			What_was_the_inspiration_for_this_event=form.cleaned_data['What_was_the_inspiration_for_this_event']
+			Would_you_like_to_give_special_credits_to_anyone=form.cleaned_data['Would_you_like_to_give_special_credits_to_anyone']
 			
 
 			data={'event_name':event_name}
 			data['event_date']=event_date
-			data['How_would_you_summarise_the_event_in_one_line']=How_would_you_summarise_the_event_in_one_line
-			data['main_body']=main_body
+			data['How_would_you_summarise_the_event']=How_would_you_summarise_the_event
+			data['As_a_writer_How_would_you_rate_the_event_out_of_10']=As_a_writer_How_would_you_rate_the_event_out_of_10
 			data['conclusion']=conclusion
-			data['time']=time
+			data['What_was_the_inspiration_for_this_event']=What_was_the_inspiration_for_this_event
+			data['Would_you_like_to_give_special_credits_to_anyone']=Would_you_like_to_give_special_credits_to_anyone
 
 			
 			return render(request,'report_informal.html',data)
