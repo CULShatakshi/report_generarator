@@ -17,8 +17,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 p {text-align: center;}
 body{ 
-  background-color: #FFDEE9;
-  background-image: linear-gradient(90deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
 
 } 
 
@@ -33,7 +34,7 @@ body{
   padding-right:200px; 
 }
 .div2{
-  height: 500px;
+  height: 1000px;
   width: 100%;
   {% comment %} background-color: powderblue; {% endcomment %}
   background-repeat:no-repeat;
@@ -111,14 +112,15 @@ background-size: cover;}
     .sidenav a {font-size: 18px;}
   }
   .carousel{
-    margin-top: 50px;
+    {% comment %} margin-top: 50px; {% endcomment %}
   }
   .carousel-inner{
     height: 100px;
   }
   .carousel-caption{
     color: black;
-    top: 50%;
+    top: 100%;
+    bottom: 50%;
   }
 </style>
 </head>
@@ -142,7 +144,7 @@ background-size: cover;}
 
 
 <div class="div1">
-<<<<<<< HEAD
+
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">About</a>
@@ -160,15 +162,13 @@ background-size: cover;}
   <h3 style= " font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; ">
     Choose a report format as per your preferance!
   </h3>
-=======
-    <h1 style="padding-top: 70px;color:rgb(0, 0, 0)">Welcome to report generator</h1>
-    <h3>Choose a report format as per your preferance!</h3>
-    <h3>tell us anout yourself</h3>
+
+
     <a class="fcc-btn" href="{% url 'new' %}">Your Information</a>
 
 
 
->>>>>>> c35013b354ca2b9827c543f319fca852c9ce6f3b
+
 </div>    
 <br>
 <br>
@@ -184,7 +184,7 @@ background-size: cover;}
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="carousel-caption d-none d-md-block" style="font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px;">
+          <div class="carousel-caption d-none d-md-block" style="font-family: 'Source Sans Pro', sans-serif; font-size: 20px; font-weight: 400; line-height: 32px; ">
             <h5>Know your brief</h5>
             <p>
               You will usually receive a clear brief for a report, including what you are studying and for whom the report should be prepared.
@@ -195,7 +195,7 @@ background-size: cover;}
           </div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-caption d-none d-md-block" style=" font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; color: black;">
+          <div class="carousel-caption d-none d-md-block" style=" font-family: 'Inder', sans-serif; line-height: 28px; color: black;">
             <h5>Step 2: Keep your brief in mind at all times</h5>
             <p>
               During your planning and writing, make sure that you keep your brief in mind: who are you writing for, and why are you writing?
@@ -205,7 +205,7 @@ background-size: cover;}
           </div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-caption d-none d-md-block" style=" font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; color: black;">
+          <div class="carousel-caption d-none d-md-block" style=" font-family: 'Inder', sans-serif; line-height: 28px;  color: black;">
             <h5>Third slide label</h5>
             <p>As you read and research, try to organise your work into sections by theme, a bit like writing a Literature Review.
 
@@ -244,7 +244,7 @@ Make sure that you keep track of your references, especially for academic work. 
     </p> {% endcomment %}
 
 
-<br>
+<br><br>
   <div class="div3">
     <div class="row" style="padding-top:100px">
         <div class="col-6" style="padding-left:400px">
