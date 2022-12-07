@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm, FormalForm, PostForm
-
+from .models import Post
+from django.http import HttpResponseRedirect
  
 from django.contrib.auth.decorators import login_required
 
@@ -72,9 +73,13 @@ def formal(request):
 	return render(request,'formal.html',{'form':form})
 
 def new(request):
-	if request.method == 'POST':
-		form=PostForm(request.POST)
-	else:
-		form=PostForm()
-	return render(request,'formal.html',{'form':form})
-		
+	
+    new_item=Post()
+    
+    new_item.first_name=request.POST.get('first_name')
+    new_item.last_name=request.POST.get('last_name')
+    new_item.save()
+    return render (request, "new.html")
+	
+
+    

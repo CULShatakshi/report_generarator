@@ -6,17 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-image: url('https://www.shutterstock.com/image-photo/blue-torn-paper-revealing-question-260nw-774749260.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fcc-btn {
+            background-color: #199319;
+            position: relative;
+            top: 100px;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+        }
+
+        .fcc-btn:hover {
+            background-color: #223094;
+  }
+    </style>
 </head>
 <body>
-    <h3>Tell us about yourself</h3>
-    <form method="post">
-        <table>
-            {{form}}
-        </table>
-        {% csrf_token %}
-        <button type="submit">Submit</button>
-
+    <h1>Tell us about yourself</h1>
+    <form action="/new/" method="post">
+        {% csrf_token %} 
+        <label for="first_name" style="color:white">Enter your name </label>
+        <input type="text" name="first_name" style="width:500px">
+        <label for="last_name"style="color:white">Enter your last name</label>
+        <input type="text" name="last_name">
+        <button type="submit" class="btn btn-primary">Save Name</button>
     </form>
+
+        
+        
+    <a class="fcc-btn" style="color:white"href="{% url 'homepage' %}">Homepage</a>
     
 </body>
 </html>
